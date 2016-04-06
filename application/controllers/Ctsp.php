@@ -5,6 +5,9 @@ class Ctsp extends CI_Controller {
 
 	function _construct(){
 		parent::__construct();
+	$this->load->model('DBMtsp');
+	$this->load->helper('form');
+	$this->load->database();
 	}
 
 
@@ -14,6 +17,19 @@ function index(){
 	$dato['titulo']= 'Principal';
 	$this->load->view('headers',$dato);
 	$this->load->view('Principal');
+}
+
+
+function CalificarTareas(){
+	$dato['titulo']= 'Calificar tarea';
+	$this->load->view('headers',$dato);
+	$this->load->view('CalificarTareas');
+}
+
+function prueba(){
+	$dato['titulo']= 'Prueba';
+	$this->load->view('headers',$dato);
+	$this->load->view('pruebap');
 }
 
 
