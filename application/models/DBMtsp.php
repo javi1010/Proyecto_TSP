@@ -4,10 +4,10 @@ if ( ! defined('BASEPATH'))  exit('No direct script access allowed');
 class DBMtsp extends CI_Model{
 	function __construct(){
 		parent::__construct();
+		$this->load->database();
 	}
 
 function validarDatos($data){
-		$this->load->database();
 		$queryAlumno = $this->db->get('listaalumno');
 		$queryProfesor = $this->db->get('profesor');
 		if($queryAlumno->num_rows()>0){
@@ -35,6 +35,45 @@ function validarDatos($data){
 redirect(base_url());
 
 }
+
+
+function datos($class,$method){
+	
+	$query = $this->db->get('accesos');
+	foreach ($query->result() as $row){
+		 	$rol =$row->Rol;
+		 	}
+	if($rol=='Profesor'){
+	$query = $this->db->get('accesoprof');
+	foreach ($query->result() as $row){
+		 	if($row->controlador==$class){
+		 		foreach ($query->result() as $row) {
+		 			if($row->metodos==$method){
+		 				return true;
+		 			}
+		 		}
+		 	}
+		 }
+	return false;
+	
+	}else{
+		$query = $this->db->get('accesoalum');
+	foreach ($query->result() as $row){
+		 	if($row->controlador==$class){
+		 		foreach ($query->result() as $row) {
+		 			if($row->metodos==$method){
+		 				return true;
+		 			}
+		 		}
+		 	}
+		 }
+		return false;
+	}	 	
+
+}
+
+
+
 
 }
 
