@@ -11,15 +11,15 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 <!-- CSS Files -->
 
-<link href="<?php echo base_url();?>../assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
-<link href="<?php echo base_url();?>../assets/css/font-awesome.min.css" rel="stylesheet">
-<link href="<?php echo base_url();?>../assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
-<link href="<?php echo base_url();?>../assets/css/animate.css" rel="stylesheet" media="screen">
-<link href="<?php echo base_url();?>../assets/css/owl.theme.css" rel="stylesheet">
-<link href="<?php echo base_url();?>../assets/css/owl.carousel.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
+<link href="<?php echo base_url();?>assets/css/font-awesome.min.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/fonts/icon-7-stroke/css/pe-icon-7-stroke.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/css/animate.css" rel="stylesheet" media="screen">
+<link href="<?php echo base_url();?>assets/css/owl.theme.css" rel="stylesheet">
+<link href="<?php echo base_url();?>assets/css/owl.carousel.css" rel="stylesheet">
 
 <!-- Colors -->
-<link href="<?php echo base_url();?>../assets/css/css-index.css" rel="stylesheet" media="screen">
+<link href="<?php echo base_url();?>assets/css/css-index.css" rel="stylesheet" media="screen">
 <!-- <link href="css/css-index-green.css" rel="stylesheet" media="screen"> -->
 <!-- <link href="css/css-index-purple.css" rel="stylesheet" media="screen"> -->
 <!-- <link href="css/css-index-red.css" rel="stylesheet" media="screen"> -->
@@ -73,20 +73,19 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 				
 					<div class="signup-header wow fadeInUp">
 						<h3 class="form-title text-center">Login</h3>
-						<form class="form-header" action="" role="form" method="POST" id="#">
-						<input type="hidden" name="u" value="503bdae81fde8612ff4944435">
-						<input type="hidden" name="id" value="bfdba52708">
+						<?= form_open("/Ctsp/comprobarDatos") ?>
+						
 							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE1" id="name" type="text" placeholder="Ingrese matrícula" required>
+								<input class="form-control input-lg" name="nombre" id="name" type="text" placeholder="Ingrese matrícula" required>
 							</div>
 							<div class="form-group">
-								<input class="form-control input-lg" name="MERGE0" id="email" type="password" placeholder="Ingrese contraseña" required>
+								<input class="form-control input-lg" name="password" id="email" type="password" placeholder="Ingrese contraseña" required>
 							</div>
 							<div class="form-group last">
 								<input type="submit" class="btn btn-warning btn-block btn-lg" value="Acceder">
 							</div>
 							<p class="privacy text-center">Debe ser un alumno activo de la UAM-I</p>
-						</form>
+						<?= form_close() ?>
 					</div>				
 				
 				</div>
@@ -96,12 +95,12 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 </div>
  
 	<!-- /.javascript files -->
-    <script src="<?php echo base_url();?>../assets/js/jquery.js"></script>
-    <script src="<?php echo base_url();?>../assets/js/bootstrap.min.js"></script>
-    <script src="<?php echo base_url();?>../assets/js/custom.js"></script>
-    <script src="<?php echo base_url();?>../assets/js/jquery.sticky.js"></script>
-	<script src="<?php echo base_url();?>../assets/js/wow.min.js"></script>
-	<script src="<?php echo base_url();?>../assets/js/owl.carousel.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.js"></script>
+    <script src="<?php echo base_url();?>assets/js/bootstrap.min.js"></script>
+    <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+    <script src="<?php echo base_url();?>assets/js/jquery.sticky.js"></script>
+	<script src="<?php echo base_url();?>assets/js/wow.min.js"></script>
+	<script src="<?php echo base_url();?>assets/js/owl.carousel.min.js"></script>
 	<script>
 		new WOW().init();
 	</script>
